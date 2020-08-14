@@ -59,6 +59,9 @@ setup = "import torchvision.models as models;" + "model = models.resnet50(num_cl
 single_gpu_runtime = timeit.repeat(stmt, setup, number = 1, repeat = num_repeat, globals = globals())
 single_gpu_mean, single_gpu_std_dev = np.mean(single_gpu_runtime), np.std(single_gpu_runtime)
 
-setup_2_gpu = "model = ModelParallelResNet50()"
-dual_gpu_runtime = timeit.repeat(stmt, setup_2_gpu, number = 1, repeat = num_repeat, globals = globals())
-dual_gpu_mean, dual_gpu_std_dev = np.mean(dual_gpu_runtime), np.std(dual_gpu_runtime)
+setup_4_gpu = "model = ModelParallelResNet50()"
+quad_gpu_runtime = timeit.repeat(stmt, setup_4_gpu, number = 1, repeat = num_repeat, globals = globals())
+quad_gpu_mean, quad_gpu_std_dev = np.mean(quad_gpu_runtime), np.std(quad_gpu_runtime)
+
+print(f"1 GPU Runtime: {single_gpu_mean} | 1 GPU Standard Deviation: {single_gpu_std_dev}")
+print(f"4 GPU Mean Runtime: {quad_gpu_mean} | 4 GPU Standard Deviation: {quad_gpu_std_dev}")
