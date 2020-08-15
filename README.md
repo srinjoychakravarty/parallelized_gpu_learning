@@ -50,15 +50,25 @@ Here _btc_over_mpi_env_ is the name you choose to give your environment.
     ```
     $ ./part2
     ```
-    
-6. To see the Matrix Multiplication over 2 GPUs using Tensorflow run the Python 3 code with the following command: 
-    ```sh
-    $ python3 part3.py
-    ```
-    
-7. To benchmark 1 vs 4 GPUs using an Artificial Neural Network with Resnet run the Cuda code with the following command:
+        
+6. To benchmark 1 vs 4 GPUs using an Artificial Neural Network with Resnet run the Cuda code with the following command:
     ```sh
     $ python3 bonus.py
+    ```
+
+7. To run the tensforflow code in part 3 we need to activate a separate environment so lets go ahead do that with the following command:
+    ```sh
+    $ conda env create -f environment2.yaml
+    ```
+
+8. We can now activate this separate environment with the following command:
+    ```sh
+    $ conda activate parallel_flow_env
+    ```
+
+9. To see the Matrix Multiplication over 2 GPUs using Tensorflow run the Python 3 code with the following command: 
+    ```sh
+    $ python3 part3.py
     ```
 
 License
