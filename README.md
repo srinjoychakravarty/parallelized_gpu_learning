@@ -8,11 +8,11 @@
 2. Large dual-gpu matrix multiplication using Tensorflow. 
 3. Quad GPU model parallelism using PyTorch 
 
-### Tutorial
+#### Demo Tutorial
 
 > **Tip:** To simulate a command run of this repo simply run the following command:
     ```sh
-    $ scriptreplay --timing=timing.txt session.txt
+    $ scriptreplay --timing=timing_part2.txt session_part2.txt
     ```
     
 ### IDE 
@@ -50,6 +50,12 @@ Here _btc_over_mpi_env_ is the name you choose to give your environment.
     ```
     $ ./part2
     ```
+    #### Demo Tutorial
+
+    > **Tip:** To simulate a demo of part 2 (OpenMP directive) simply run:
+    ```sh
+    $ scriptreplay --timing=timing_part2.txt session_part2.txt
+    ```
         
 6. To benchmark 1 vs 4 GPUs using an Artificial Neural Network with Resnet run the Cuda code with the following command:
     ```sh
@@ -70,6 +76,13 @@ Here _btc_over_mpi_env_ is the name you choose to give your environment.
     ```sh
     $ python3 part3.py
     ```
+        #### Demo Tutorial
+
+    > **Tip:** To simulate a demo of part 3 (TensorFlow Matrix Multiplication) simply run:
+    ```sh
+    $ scriptreplay --timing=timing_part3.txt session_part3.txt
+    ```
+
 
 License
 ----
